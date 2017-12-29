@@ -1,0 +1,83 @@
+﻿<Window x:Class="MVVM_Demo_20171229.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    
+    <Grid>
+        <Button x:Name="btn" Command="{Binding ClickCommand}" CommandParameter="test" Foreground="red"  Margin="50" >
+            <!--<Button.ContentTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock x:Name="tb" Text="{Binding Name}"/>
+                        <TextBlock Text="{Binding Mfg}"/>
+                        <TextBlock Text="{Binding Version}"/>
+                        <TextBlock Text="{Binding Date}"/>
+                    </StackPanel>
+                    <DataTemplate.Triggers>
+                        --><!--<Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="tb" Property="Background" Value="red"/>
+                        </Trigger>-->
+                        
+                        <!--<DataTrigger>
+                            
+                        </DataTrigger>
+                        
+                        <EventTrigger>
+                            
+                        </EventTrigger>--><!--
+                    </DataTemplate.Triggers>
+                </DataTemplate>
+            </Button.ContentTemplate>-->
+            
+            <!--<Button.Template>
+                <ControlTemplate>
+                    <StackPanel>
+                        <TextBlock x:Name="tt" Text="{Binding Driver.Name}" Foreground="{TemplateBinding Foreground}"/>
+                        <TextBlock Text="{Binding Driver.Mfg}"/>
+                        <TextBlock Text="{Binding Driver.Version}"/>
+                        <TextBlock Text="{Binding Driver.Date}"/>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>-->
+            
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Width" Value="50"/>
+                    <Setter Property="Background" Value="Green"/>
+                    <!--<Setter Property="ContentTemplate">
+                        <Setter.Value>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Name}"/>
+                                    <TextBlock Text="{Binding Mfg}"/>
+                                    <TextBlock Text="{Binding Version}"/>
+                                    <TextBlock Text="{Binding Date}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>-->
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <StackPanel Margin="50">
+                                    <TextBlock Text="{Binding Driver.Name}" Foreground="{TemplateBinding Foreground}"/>
+                                    <TextBlock Text="{Binding Driver.Mfg}"/>
+                                    <TextBlock Text="{Binding Driver.Version}"/>
+                                    <TextBlock Text="{Binding Driver.Date}"/>
+                                </StackPanel>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter  Property="Background" Value="red"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>
