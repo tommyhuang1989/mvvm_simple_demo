@@ -4,6 +4,18 @@
         Title="MainWindow" Height="350" Width="525">
     
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Content="abc"/>
+        <Button Grid.Row="1" Content="test"/>
+        <Label Grid.Row="2" Content="{Binding Driver}"/>
+        <ListBox Grid.Row="3" ItemsSource="{Binding DriverList}"/>
+        
         <Button x:Name="btn" Command="{Binding ClickCommand}" CommandParameter="test" Foreground="red"  Margin="50" >
             <!--<Button.ContentTemplate>
                 <DataTemplate>

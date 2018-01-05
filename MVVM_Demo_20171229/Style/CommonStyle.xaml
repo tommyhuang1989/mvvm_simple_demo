@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:model="clr-namespace:MVVM_Demo_20171229.Model">
+    <DataTemplate DataType="{x:Type model:Driver}">
+        <StackPanel>
+            <Border BorderBrush="Plum" BorderThickness="2" CornerRadius="3">
+                <TextBlock Text="{Binding Name}"/>
+            </Border>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Foreground="BlueViolet" Text="{Binding Mfg}"/>
+                <TextBlock Foreground="OliveDrab" Text="{Binding Date}" Margin="20,0"/>
+                <TextBlock Foreground="BlanchedAlmond" Text="{Binding Version}"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+</ResourceDictionary>
